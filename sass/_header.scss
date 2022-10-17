@@ -1,0 +1,173 @@
+.header {
+  height: 70rem;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 60rem 1fr;
+  grid-template-rows: 23rem 1fr;
+  /* height: 100%; */
+  /* width: 100%; */
+  position: relative;
+  /* left: 0; */
+  /* right: 0; */
+  // z-index: -2;
+  object-fit: cover;
+  border-bottom: 8px solid #222;
+
+  // overflow: hidden;
+  
+  &__background {
+    height: 70rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // z-index: -2;
+    object-fit: cover;
+
+    &--filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      background: rgba(black, 0.4);
+      background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+      // z-index: -1;
+    }
+  }
+
+  &__top {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr repeat(2, min-content);
+    grid-column-gap: 3rem;
+
+    padding: 3rem 4rem;
+    z-index: 1;
+  }
+
+  &__content {
+    // grid-auto-flow: column;
+    grid-row: 2/-1;
+    grid-column: 2/3;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content) 1fr;
+    grid-row-gap: 2.2rem;
+    
+    h1 {
+      grid-row: 1/2;
+      margin: 0;
+    }
+
+    h2 {
+      grid-row: 2/3;
+      margin: 0;
+    }
+
+    h3 {
+      grid-row: 3/4;
+    }
+
+  }
+}
+
+.form__header {
+  display: flex;
+  flex-direction: row;
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  align-self: start;
+  width: 105%;
+  height: 6rem;
+  border-radius: 2px;
+
+}
+
+.netflix-logo {
+  // position: absolute;
+  // top: 3rem;
+  // left: 4rem;
+  width: 12rem; 
+}
+
+.btn {
+  
+  &__language {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, min-content);
+    grid-column-gap: 1px;
+
+    
+    border-style: solid;
+    
+    border-width: 1px;
+    border-radius: 2px;
+    
+    
+
+    // position: absolute;
+    // top: 3rem;
+    // right: 10rem;
+    grid-column: 2 / 3;
+
+    &--white {
+      @extend .btn__language;
+      border-color: #fff;
+      padding: 10px 5px;
+          
+      width: 9.4rem;
+      height: 3.6rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__signin {
+    background-color: $color-red;
+    border-style: none;
+    border-radius: 2px;
+    padding: 10px 5px;
+    font-size: 1.7rem;
+    width: 8.419rem;
+    height: 3.4rem;
+    grid-column: 3 / 4;
+
+    
+    
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    // position: absolute;
+    // top: 3rem;
+    // right: 4rem;
+    
+    &:hover {
+      cursor: pointer;
+      
+    }
+  }
+}
+
+.svg-icon--white {
+  width: 1.5rem;
+  filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(144deg) brightness(99%) contrast(104%); // white
+
+  &__language {
+    margin-right: 2px;
+  }
+  
+  &__down-arrow {
+    margin-left: -2px;
+  }
+}

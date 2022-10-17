@@ -1,0 +1,56 @@
+// COLOR VARIABLE
+$color-red: #E50914;
+$color-button: #303030;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 69%;
+  }
+  @include respond(desktop) {
+    font-size: 62.5%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 40%;
+  }
+
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #fff;
+  background-color: grey;
+
+  & section {
+    border-bottom: 8px solid #222;
+    background-color: black;
+  }
+
+}
+
+.container {
+  display: grid;
+  
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(6rem, 1fr) [col-end]) [center-end] 1fr [full-end];
+  grid-template-rows: 70rem repeat(4, 48rem) 1fr min-content; // section-1 : 48rem;
+  // grid-row-gap: 1rem;
+
+  @include respond(tab-port) {
+    grid-template-rows: 70rem 82rem 82rem 87.5rem 91rem 1fr min-content;
+  }
+
+}
