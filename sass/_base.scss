@@ -23,7 +23,7 @@ html {
     font-size: 50%;
   }
   @include respond(phone) {
-    font-size: 40%;
+    font-size: 37%;
   }
 
 }
@@ -50,7 +50,8 @@ body {
   // grid-row-gap: 1rem;
 
   @include respond(tab-port) {
-    grid-template-rows: 70rem 82rem 82rem 87.5rem 91rem 1fr min-content;
+    // grid-template-rows: 89rem 82rem 82rem 87.5rem 91rem 1fr min-content;
+    grid-template-rows: 89rem repeat(4,max-content) 1fr min-content;
   }
 
 }

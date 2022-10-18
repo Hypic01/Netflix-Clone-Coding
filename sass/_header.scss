@@ -15,6 +15,10 @@
   border-bottom: 8px solid #222;
 
   // overflow: hidden;
+
+  @include respond(tab-port) {
+    height: 100%;
+  }
   
   &__background {
     height: 70rem;
@@ -24,6 +28,10 @@
     right: 0;
     // z-index: -2;
     object-fit: cover;
+
+    @include respond(tab-port) {
+      height: 100%;
+    }
 
     &--filter {
       position: absolute;
@@ -66,6 +74,10 @@
     h1 {
       grid-row: 1/2;
       margin: 0;
+
+      @include respond(phone) {
+        font-size: 4.7rem;
+      }
     }
 
     h2 {
@@ -97,6 +109,10 @@
   // top: 3rem;
   // left: 4rem;
   width: 12rem; 
+
+  @include respond(phone) {
+    width: 15rem;
+  }
 }
 
 .btn {
@@ -130,6 +146,16 @@
       width: 9.4rem;
       height: 3.6rem;
       font-size: 1.5rem;
+
+      @include respond(phone) {
+        width: 15.4rem;
+        height: 4.6rem;
+        font-size: 2.5rem;
+      }
+
+      &__text {
+        margin-top: 2px;
+      }
     }
   }
 
@@ -151,6 +177,12 @@
     // position: absolute;
     // top: 3rem;
     // right: 4rem;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+      width: 10.419rem;
+      height: 4.4rem;
+    }
     
     &:hover {
       cursor: pointer;
@@ -165,9 +197,17 @@
 
   &__language {
     margin-right: 2px;
+    margin-top: 4px;
+
+    width: 1.3rem;
+
+    @include respond(phone){
+      width: 2rem;
+    }
   }
   
   &__down-arrow {
-    margin-left: -2px;
+    // margin-left: -2px;
+    margin-top: 4px;
   }
 }
