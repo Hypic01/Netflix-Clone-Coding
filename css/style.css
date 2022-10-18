@@ -264,9 +264,9 @@ body {
         font-size: 2rem; } }
     @media (max-width: 34.375em) {
       .form__header--label {
-        top: 12%;
+        top: 11%;
         left: 2rem;
-        font-size: 2.5rem; } }
+        font-size: 2rem; } }
   .form__header button {
     width: 30%;
     background-color: #E50914;
@@ -624,9 +624,7 @@ body {
       font-size: 2rem; }
       @media (max-width: 59.375em) {
         .section-faq .faq-form h3 {
-          font-size: 3rem;
-          margin-left: 12rem;
-          margin-right: 12rem; } }
+          font-size: 3rem; } }
     .section-faq .faq-form__div {
       width: 66rem; }
       @media (max-width: 120em) {
@@ -642,7 +640,7 @@ body {
           flex-direction: column;
           align-items: center;
           height: 100%;
-          width: 100%; } }
+          width: 110%; } }
       .section-faq .faq-form__div--input {
         width: 89%;
         height: 6rem; }
@@ -659,7 +657,7 @@ body {
             border-radius: 3px; } }
         @media (max-width: 34.375em) {
           .section-faq .faq-form__div--input {
-            width: 80%; } }
+            width: 90%; } }
       .section-faq .faq-form__div--label {
         position: absolute;
         color: grey;

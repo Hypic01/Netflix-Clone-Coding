@@ -30,6 +30,7 @@
 
       @include respond(phone) {
         width: 100%;
+        
       }
       
       &:focus {
@@ -81,9 +82,9 @@
       }
 
       @include respond(phone) {
-        top: 12%;
+        top: 11%;
         left: 2rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
 
